@@ -3,11 +3,16 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    // After add custom colors, you will lose all pre-defined Tailwind colors
+    // colors: {
+    //   primary: '#0070f3',
+    // },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: {
+          100: '#0070f3',
+          932: '#012247',
+        },
       },
     },
   },
